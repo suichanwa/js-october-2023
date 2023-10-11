@@ -1,0 +1,14 @@
+body {
+    background-image: url("../img/4.jpg");
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+
+
+h1{
+            color: white; /* Set the desired title color */
+            font-size: 35px;
+}
+
