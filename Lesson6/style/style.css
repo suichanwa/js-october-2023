@@ -1,0 +1,69 @@
+/*
+
+.fix{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    right: 110px;
+    bottom: 0;
+}
+
+.absolut{
+    position: absolute;
+    background-color: black;
+    height: 200px;
+    width: 200px;
+}
+
+.parent{
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+}
+
+.child{
+    background-color: blue ;
+    width: 200px;
+    height:200px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+*/
+#picture{
+    width: 650px;
+    height: 400px;
+    margin: 20px auto;
+    border: 10px solid blue;
+    position: relative;
+}
+
+.road{
+    position: absolute;
+    bottom: 0px;
+
+}
+
+.car{
+    position: absolute;
+    right: 0px;
+    bottom: 38px;
+    z-index: 2;
+}
+
+.tree{
+    position: absolute;
+    right: 0px;
+    bottom: 58px;
+    z-index: 1;
+}
+
+.cloud{
+    position: absolute;
+    right: 70px;
+    top: 40px;
+    z-index: auto;
+}
