@@ -1,0 +1,79 @@
+.static{
+    background-color: aqua;
+    width: 400px;
+    height: 300px;
+}
+
+.flexibil{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.fonts{
+    font-size: 30px;
+    color: red;
+    font-style: italic;
+    font-weight: 900;
+    font-family: monospace;
+}
+
+.font-special{
+    font-size: 30px;
+    font-family: Ubuntu Mono;
+}
+
+.test4{
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.bordertest{
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    border-radius: 30px 60px 300px 300px;
+}
+
+.limon{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 75px 15px;
+    border: 1px solid black;
+}
+
+/*
+selector universal da stil la toata pagina si ne noteaza prin steluta este cel mai slab dupa specialitate
+(e de dorit sa nu folosim selector universal) si ne noteaza prin steuta
+*/
+
+#c{
+    color: red;
+}
+
+
+
+.div ,.h1,.h2 {
+    color: blue;
+}
+
+.block h2 {
+	color: red;
+}
+.block p {
+	color: green;
+}
+
+.test5 > p {
+    color: green;
+}
+
+
+a[href $=".md"] {
+    color: red;
+}
+
+li:nth-child(2) {
+    color: red;
+}
+
