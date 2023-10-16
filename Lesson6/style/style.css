@@ -1,69 +1,59 @@
-/*
-
-.fix{
-    background-color: black;
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    right: 110px;
-    bottom: 0;
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-.absolut{
+.scenic-background {
     position: absolute;
-    background-color: black;
-    height: 200px;
-    width: 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.parent{
-    background-color: black;
-    height: 500px;
-    width: 500px;
+.car-container {
     position: absolute;
-}
-
-.child{
-    background-color: blue ;
-    width: 200px;
-    height:200px;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-}
-
-*/
-#picture{
-    width: 650px;
-    height: 400px;
-    margin: 20px auto;
-    border: 10px solid blue;
-    position: relative;
-}
-
-.road{
-    position: absolute;
-    bottom: 0px;
-
-}
-
-.car{
-    position: absolute;
-    right: 0px;
+    right: 0;
     bottom: 38px;
     z-index: 2;
 }
 
-.tree{
+.tree-container {
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom: 58px;
     z-index: 1;
 }
 
-.cloud{
+.cloud-container {
     position: absolute;
     right: 70px;
     top: 40px;
     z-index: auto;
 }
+
+.sun-container {
+    width: 50px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    background-size: cover; /* Adjust this based on your image aspect ratio */
+    position: absolute;
+    top: 0px; /* Adjust the top position as needed */
+    left: 500px; /* Adjust the left position as needed */
+    z-index: 3; /* Adjust the z-index value as needed */
+}
+
+.sign-container {
+    width: 120px; /* Set the desired width */
+    height: 120px; /* Set the desired height */
+    background-image: url('img/sign.jpg'); /* Set the image URL */
+    background-size: cover; /* Adjust this based on your image aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 220px; /* Adjust the left position as needed */
+    top: 270px;
+}
+
+
