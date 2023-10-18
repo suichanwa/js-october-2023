@@ -286,16 +286,16 @@ let charCode8 = "".charCodeAt(0); // Output: NaN
 let charCode9 = "ChatGPT".charCodeAt(7); // Output: 84
 let charCode10 = "Programming".charCodeAt(5); // Output: 97
 
-let str1 = "Hello".concat(", ", "World!"); // Output: "Hello, World!"
-let str2 = "This".concat(" is", " a", " concat example."); // Output: "This is a concat example."
-let str3 = "Concatenate".concat("", " with empty string."); // Output: "Concatenate with empty string."
-let str4 = "One".concat(" ", "Two").concat(" ", "Three"); // Output: "One Two Three"
-let str5 = "Concatenate".concat(" ", 123, " numbers"); // Output: "Concatenate 123 numbers"
-let str6 = "Testing".concat(" ", null, " null value"); // Output: "Testing null null value"
-let str7 = "Concatenation".concat(" with", " multiple", " arguments."); // Output: "Concatenation with multiple arguments."
-let str8 = "JavaScript".concat(" is", " great!").concat(" Really", " great!"); // Output: "JavaScript is great! Really great!"
-let str9 = "".concat("Empty", " string").concat(" test", " case."); // Output: "Empty string test case."
-let str10 = "Concat".concat(" and", " append", " strings").concat(" together"); // Output: "Concat and append strings together"
+let str11 = "Hello".concat(", ", "World!"); // Output: "Hello, World!"
+let str22 = "This".concat(" is", " a", " concat example."); // Output: "This is a concat example."
+let str33 = "Concatenate".concat("", " with empty string."); // Output: "Concatenate with empty string."
+let str44 = "One".concat(" ", "Two").concat(" ", "Three"); // Output: "One Two Three"
+let str55 = "Concatenate".concat(" ", 123, " numbers"); // Output: "Concatenate 123 numbers"
+let str66 = "Testing".concat(" ", null, " null value"); // Output: "Testing null null value"
+let str77 = "Concatenation".concat(" with", " multiple", " arguments."); // Output: "Concatenation with multiple arguments."
+let str88 = "JavaScript".concat(" is", " great!").concat(" Really", " great!"); // Output: "JavaScript is great! Really great!"
+let str99 = "".concat("Empty", " string").concat(" test", " case."); // Output: "Empty string test case."
+let str100 = "Concat".concat(" and", " append", " strings").concat(" together"); // Output: "Concat and append strings together"
 
 // Using endsWith()
 let endsWithExample1 = "Hello, World!".endsWith("!"); // true
@@ -332,3 +332,430 @@ let includesExample7 = "Example".includes("xam"); // true
 let includesExample8 = "Banana".includes("apple"); // false
 let includesExample9 = "Another example".includes("EXAMPLE"); // false
 let includesExample10 = "ABCDE".includes(""); // true
+
+// indexOf() examples
+let indexOfValue = "Hello, world!".indexOf("world"); // Output: 7
+let indexOfValue1 = "Hello, world!".indexOf("l"); // Output: 2
+let indexOfValue2 = "JavaScript is fun!".indexOf("Python"); // Output: -1
+let indexOfValue3 = [1, 2, 3, 4, 5].indexOf(3); // Output: 2
+let indexOfValue4 = "OpenAI".indexOf("A"); // Output: 4
+let indexOfValue5 = "Banana".indexOf("na", 2); // Output: 4
+let indexOfValue6 = "This is a test".indexOf("is", 3); // Output: 5
+let indexOfValue7 = "Today is a sunny day".indexOf("day", 13); // Output: 17
+let indexOfValue8 = "JavaScript".indexOf("Script"); // Output: 4
+let indexOfValue9 = "JavaScript".indexOf("Script", 5); // Output: -1
+
+// lastIndexOf() examples
+let lastIndexOfValue = "Hello, world!".lastIndexOf("world"); // Output: 7
+let lastIndexOfValue1 = "Hello, world!".lastIndexOf("l"); // Output: 3
+let lastIndexOfValue2 = "JavaScript is fun!".lastIndexOf("Python"); // Output: -1
+let lastIndexOfValue3 = [1, 2, 3, 4, 3, 5].lastIndexOf(3); // Output: 4
+let lastIndexOfValue4 = "OpenAI".lastIndexOf("A"); // Output: 4
+let lastIndexOfValue5 = "Banana".lastIndexOf("na", 2); // Output: 2
+let lastIndexOfValue6 = "This is a test".lastIndexOf("is", 3); // Output: 2
+let lastIndexOfValue7 = "Today is a sunny day".lastIndexOf("day", 13); // Output: 13
+let lastIndexOfValue8 = "JavaScript".lastIndexOf("Script"); // Output: 4
+let lastIndexOfValue9 = "JavaScript".lastIndexOf("Script", 3); // Output: -1
+
+// localeCompare() examples
+let localeComparison = "apple".localeCompare("banana"); // Output: -1
+let localeComparison1 = "banana".localeCompare("apple"); // Output: 1
+let localeComparison2 = "apple".localeCompare("apple"); // Output: 0
+let localeComparison3 = "orange".localeCompare("banana"); // Output: 1
+let localeComparison4 = "Banana".localeCompare("banana"); // Output: -1
+let localeComparison5 = "ä".localeCompare("z"); // Output: -1
+let localeComparison6 = "z".localeCompare("ä"); // Output: 1
+let localeComparison7 = "Ü".localeCompare("u"); // Output: 1
+let localeComparison8 = "Ü".localeCompare("u", 'de-DE-u-co-phonebk'); // Output: -1
+let localeComparison9 = "Monday".localeCompare("monday", 'en', { sensitivity: 'base' }); // Output: 0
+
+// Examples using match()
+let matchResult = "Hello, World!".match(/lo/); // Output: ["lo"]
+let matchResult1 = "123abc456".match(/\d+/); // Output: ["123"]
+let matchResult2 = "JavaScript".match(/java/i); // Output: ["Java"]
+let matchResult3 = "regex patterns".match(/pattern/); // Output: ["pattern"]
+let matchResult4 = "12345".match(/\D/); // Output: ["N"]
+let matchResult5 = "apple,banana,cherry".match(/banana/); // Output: ["banana"]
+let matchResult6 = "OpenAI".match(/gpt/i); // Output: null
+let matchResult7 = "12345".match(/\d/g); // Output: ["1", "2", "3", "4", "5"]
+let matchResult8 = "The quick brown fox".match(/lazy/); // Output: null
+let matchResult9 = "1A2B3C4D".match(/\d\D/g); // Output: ["1A", "2B", "3C", "4D"]
+
+// Examples using repeat()
+let repeatResult = "abc".repeat(3); // Output: "abcabcabc"
+let repeatResult1 = "123".repeat(0); // Output: ""
+let repeatResult2 = "Hi!".repeat(2); // Output: "Hi!Hi!"
+let repeatResult3 = "Coding".repeat(1); // Output: "Coding"
+let repeatResult4 = "X".repeat(5); // Output: "XXXXX"
+let repeatResult5 = "OpenAI".repeat(3); // Output: "OpenAIOpenAIOpenAI"
+let repeatResult6 = "123".repeat(4); // Output: "123123123123"
+let repeatResult7 = "JS".repeat(2.5); // Output: "JSJS"
+let repeatResult8 = "Hello, World!".repeat(2); // Output: "Hello, World!Hello, World!"
+let repeatResult9 = "a".repeat(100); // Output: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+// Examples using replace()
+let replaceResult = "Hello, world!".replace(/world/, "there"); // Output: "Hello, there!"
+let replaceResult1 = "abc123abc456".replace(/\d+/g, "X"); // Output: "abcXabcX"
+let replaceResult2 = "I love programming.".replace("love", "enjoy"); // Output: "I enjoy programming."
+let replaceResult3 = "Hello, John!".replace(/johN/i, "Jack"); // Output: "Hello, Jack!"
+let replaceResult4 = "Color: #123456".replace(/#(\w+)/, "#FFAABB"); // Output: "Color: #FFAABB"
+let replaceResult5 = "apple,banana,cherry".replace(/banana/, "grape"); // Output: "apple,grape,cherry"
+let replaceResult6 = "JavaScript is fun!".replace(/java/i, "Python"); // Output: "PythonScript is fun!"
+let replaceResult7 = "123456789".replace(/\d/g, "*"); // Output: "*********"
+let replaceResult8 = "The quick brown fox".replace("quick", "lazy"); // Output: "The lazy brown fox"
+let replaceResult9 = "1A2B3C4D".replace(/\d\D/g, "X"); // Output: "XAXBXCXDX"
+
+let searchString = "Hello, World!";
+let result1 = searchString.search("World"); // Output: 7
+let result2 = searchString.search("Goodbye"); // Output: -1 (not found)
+let result3 = "Sample123".search(/\d+/); // Output: 6
+let result4 = "Sample123".search(/\D+/); // Output: -1
+let result5 = "Example, example, example".search(/example/i); // Output: 8 (case-insensitive)
+let result6 = "This is a test".search(/test$/); // Output: 10 (search at the end)
+let result7 = "12345".search(/^\d+$/); // Output: 0 (entire string is a number)
+let result8 = "abc123def".search(/[0-9]/); // Output: 3 (position of the first digit)
+let result9 = "Apple orange banana".search(/\bapple\b/i); // Output: -1 (case-insensitive word boundary)
+let result10 = "Apples and oranges".search(/\boranges\b/i); // Output: 12 (case-insensitive word boundary)
+
+let str = "Hello, World!";
+let sliced1 = str.slice(0, 5); // Output: "Hello"
+let sliced2 = str.slice(7, 12); // Output: "World"
+let sliced3 = str.slice(7); // Output: "World!"
+let sliced4 = str.slice(-6); // Output: "World!"
+let sliced5 = str.slice(-6, -1); // Output: "World"
+let sliced6 = "12345".slice(1, 3); // Output: "23"
+let sliced7 = "JavaScript".slice(4, 7); // Output: "Scr"
+let sliced8 = "abcdefg".slice(2); // Output: "cdefg"
+let sliced9 = "Example String".slice(0, -7); // Output: "Example"
+let sliced10 = "The quick brown fox".slice(-3, -1); // Output: "fo"
+
+let text = "apple,orange,banana";
+let split1 = text.split(","); // Output: ["apple", "orange", "banana"]
+let split2 = "One Two Three".split(" "); // Output: ["One", "Two", "Three"]
+let split3 = "a-b-c-d".split("-"); // Output: ["a", "b", "c", "d"]
+let split4 = "123-456-789".split("-"); // Output: ["123", "456", "789"]
+let split5 = "One,Two,,Three".split(","); // Output: ["One", "Two", "", "Three"]
+let split6 = "apples and oranges".split(/s\s/); // Output: ["apples and", "oranges"]
+let split7 = "a b c d e".split(/\s/); // Output: ["a", "b", "c", "d", "e"]
+let split8 = "apple,orange,banana".split(",", 2); // Output: ["apple", "orange"]
+let split9 = "Name: John, Age: 30".split(/:\s*/); // Output: ["Name", "John, Age", "30"]
+let split10 = "apple orange banana".split(/\s+/); // Output: ["apple", "orange", "banana"]
+
+// Using startsWith()
+let startsWithExample = "Hello, World!";
+let startsWith1 = startsWithExample.startsWith("Hello"); // true
+let startsWith2 = startsWithExample.startsWith("world"); // false
+let startsWith3 = startsWithExample.startsWith("World", 7); // true
+let startsWith4 = startsWithExample.startsWith("World", 8); // false
+let startsWith5 = startsWithExample.startsWith("World", 7); // true
+let startsWith6 = startsWithExample.startsWith("o", 4); // true
+let startsWith7 = startsWithExample.startsWith("o", 5); // false
+let startsWith8 = startsWithExample.startsWith("!", 12); // true
+let startsWith9 = startsWithExample.startsWith("Hello", -1); // true
+let startsWith10 = startsWithExample.startsWith(""); // true
+
+// Using substr()
+let substrExample = "JavaScript";
+let substr1 = substrExample.substr(4); // "Script"
+let substr2 = substrExample.substr(0, 4); // "Java"
+let substr3 = substrExample.substr(4, 3); // "Scr"
+let substr4 = substrExample.substr(8, 2); // "t"
+let substr5 = substrExample.substr(-6); // "Script"
+let substr6 = substrExample.substr(2, -2); // ""
+let substr7 = substrExample.substr(11); // ""
+let substr8 = substrExample.substr(0, 11); // "JavaScript"
+let substr9 = substrExample.substr(2, 0); // ""
+let substr10 = substrExample.substr(0); // "JavaScript"
+
+// Using substring()
+let substringExample = "OpenAI GPT-3.5";
+let substring1 = substringExample.substring(6); // "I GPT-3.5"
+let substring2 = substringExample.substring(0, 6); // "OpenAI"
+let substring3 = substringExample.substring(7, 13); // "GPT-3."
+let substring4 = substringExample.substring(13, 20); // "5"
+let substring5 = substringExample.substring(-6); // "OpenAI GPT-3.5"
+let substring6 = substringExample.substring(6, 2); // "I G"
+let substring7 = substringExample.substring(20); // ""
+let substring8 = substringExample.substring(0, 20); // "OpenAI GPT-3.5"
+let substring9 = substringExample.substring(2, 2); // ""
+let substring10 = substringExample.substring(4, 4); // ""
+
+let lowercaseExample1 = "Hello World".toLocaleLowerCase();
+let lowercaseExample2 = "ThIs Is A MixEd CaSe".toLocaleLowerCase();
+let lowercaseExample3 = "1234".toLocaleLowerCase();
+let lowercaseExample4 = "ÇÄFE".toLocaleLowerCase();
+let lowercaseExample5 = "UpperCase Text".toLocaleLowerCase();
+let lowercaseExample6 = "camelCaseExample".toLocaleLowerCase();
+let lowercaseExample7 = "Greek Συγγραφή".toLocaleLowerCase();
+let lowercaseExample8 = "HËLLÔ WÖRLD".toLocaleLowerCase();
+let lowercaseExample9 = "español".toLocaleLowerCase();
+let lowercaseExample10 = "русский язык".toLocaleLowerCase();
+
+let uppercaseExample1 = "Hello World".toLocaleUpperCase();
+let uppercaseExample2 = "ThIs Is A MixEd CaSe".toLocaleUpperCase();
+let uppercaseExample3 = "1234".toLocaleUpperCase();
+let uppercaseExample4 = "çäfe".toLocaleUpperCase();
+let uppercaseExample5 = "LowerCase Text".toLocaleUpperCase();
+let uppercaseExample6 = "camelCaseExample".toLocaleUpperCase();
+let uppercaseExample7 = "Greek Συγγραφή".toLocaleUpperCase();
+let uppercaseExample8 = "Hëllô Wörld".toLocaleUpperCase();
+let uppercaseExample9 = "español".toLocaleUpperCase();
+let uppercaseExample10 = "русский язык".toLocaleUpperCase();
+
+let lowercaseExample11 = "Hello World".toLowerCase();
+let lowercaseExample12 = "ThIs Is A MixEd CaSe".toLowerCase();
+let lowercaseExample13 = "1234".toLowerCase();
+let lowercaseExample14 = "ÇÄFE".toLowerCase();
+let lowercaseExample15 = "UpperCase Text".toLowerCase();
+let lowercaseExample16 = "camelCaseExample".toLowerCase();
+let lowercaseExample17 = "Greek Συγγραφή".toLowerCase();
+let lowercaseExample18 = "HËLLÔ WÖRLD".toLowerCase();
+let lowercaseExample19 = "español".toLowerCase();
+let lowercaseExample20 = "русский язык".toLowerCase();
+
+console.log(
+    lowercaseExample1, lowercaseExample2, lowercaseExample3, lowercaseExample4, lowercaseExample5,
+    lowercaseExample6, lowercaseExample7, lowercaseExample8, lowercaseExample9, lowercaseExample10,
+    uppercaseExample1, uppercaseExample2, uppercaseExample3, uppercaseExample4, uppercaseExample5,
+    uppercaseExample6, uppercaseExample7, uppercaseExample8, uppercaseExample9, uppercaseExample10,
+    lowercaseExample11, lowercaseExample12, lowercaseExample13, lowercaseExample14, lowercaseExample15,
+    lowercaseExample16, lowercaseExample17, lowercaseExample18, lowercaseExample19, lowercaseExample20
+);
+
+// Examples using toString()
+let num1 = 42;
+let str1 = num1.toString();
+
+let bool1 = true;
+let str2 = bool1.toString();
+
+let array1 = [1, 2, 3];
+let str3 = array1.toString();
+
+let date1 = new Date();
+let str4 = date1.toString();
+
+let obj1 = { name: "John", age: 30 };
+let str5 = obj1.toString();
+
+let n = null;
+let str6 = n.toString();
+
+let undef;
+let str7 = undef.toString();
+
+let regexp = /test/i;
+let str8 = regexp.toString();
+
+let func = function() {
+    return "Hello, World!";
+};
+let str9 = func.toString();
+
+let infinity = 1 / 0;
+let str10 = infinity.toString();
+
+// Examples using toUpperCase()
+let text1 = "hello, world!";
+let upper1 = text1.toUpperCase();
+
+let text2 = "JavaScript is fun";
+let upper2 = text2.toUpperCase();
+
+let text3 = "Web Development";
+let upper3 = text3.toUpperCase();
+
+let text4 = "OpenAI's GPT-3";
+let upper4 = text4.toUpperCase();
+
+let text5 = "12345";
+let upper5 = text5.toUpperCase();
+
+let text6 = "mixedCASE";
+let upper6 = text6.toUpperCase();
+
+let emptyString = "";
+let upper7 = emptyString.toUpperCase();
+
+let specialChars = "!@# $%^";
+let upper8 = specialChars.toUpperCase();
+
+let emoji = "😃🚀";
+let upper9 = emoji.toUpperCase();
+
+let whitespace = "  leading and trailing  ";
+let upper10 = whitespace.toUpperCase();
+
+// Examples using trim()
+let space1 = "    trim leading spaces";
+let trimmed1 = space1.trim();
+
+let space2 = "trim trailing spaces     ";
+let trimmed2 = space2.trim();
+
+let space3 = "  trim both leading and trailing spaces   ";
+let trimmed3 = space3.trim();
+
+let noSpace1 = "no spaces";
+let trimmed4 = noSpace1.trim();
+
+let space4 = "  spaces in-between  ";
+let trimmed5 = space4.trim();
+
+let tabs1 = "\t\t\ttabs in this\t\t\t";
+let trimmed6 = tabs1.trim();
+
+let mixedSpaces = "  leading, trailing,  and spaces in-between    ";
+let trimmed7 = mixedSpaces.trim();
+
+let newline = "\n\n\nnewline characters\n\n\n";
+let trimmed8 = newline.trim();
+
+let mixedChars = " \t\tmixed characters and spaces \t\t ";
+let trimmed9 = mixedChars.trim();
+
+let empty = "";
+let trimmed10 = empty.trim();
+
+// Output all the results
+console.log(
+    str1, str2, str3, str4, str5, str6, str7, str8, str9, str10,
+    upper1, upper2, upper3, upper4, upper5, upper6, upper7, upper8, upper9, upper10,
+    trimmed1, trimmed2, trimmed3, trimmed4, trimmed5, trimmed6, trimmed7, trimmed8, trimmed9, trimmed10
+);
+
+let absoluteValue132 = Math.abs(-5).valueOf();
+let absoluteValue12 = Math.abs(0).valueOf();
+let absoluteValue23 = Math.abs(3.13).valueOf();
+let absoluteValue34 = Math.abs(-3.13).valueOf();
+let absoluteValue45 = Math.abs(5 - 10).valueOf();
+let absoluteValue56 = Math.abs(10 - 5).valueOf();
+let absoluteValue67 = Math.abs(10 - 5).valueOf();
+let absoluteValue78 = Math.abs(10 - 5).valueOf();
+let absoluteValue89 = Math.abs(10 - 5).valueOf();
+let absoluteValue90 = Math.abs(10 - 5).valueOf();
+
+console.log(
+    absoluteValue, absoluteValue1, absoluteValue2, absoluteValue3,
+    absoluteValue4, absoluteValue5, absoluteValue6, absoluteValue7,
+    absoluteValue8, absoluteValue9
+);
+
+let isFiniteValue = isFinite(42); // true
+let isFiniteValue1 = isFinite(Infinity); // false
+let isFiniteValue2 = isFinite(-Infinity); // false
+let isFiniteValue3 = isFinite(NaN); // false
+let isFiniteValue4 = isFinite(0); // true
+let isFiniteValue5 = isFinite("42"); // true
+let isFiniteValue6 = isFinite(null); // true
+let isFiniteValue7 = isFinite([]); // true
+let isFiniteValue8 = isFinite({}); // true
+let isFiniteValue9 = isFinite(undefined); // false
+
+let isIntegerValue = Number.isInteger(42); // true
+let isIntegerValue1 = Number.isInteger(42.5); // false
+let isIntegerValue2 = Number.isInteger(-17); // true
+let isIntegerValue3 = Number.isInteger(0); // true
+let isIntegerValue4 = Number.isInteger("42"); // false
+let isIntegerValue5 = Number.isInteger(null); // false
+let isIntegerValue6 = Number.isInteger([]); // false
+let isIntegerValue7 = Number.isInteger({}); // false
+let isIntegerValue8 = Number.isInteger(NaN); // false
+let isIntegerValue9 = Number.isInteger(Infinity); // false
+
+let isNaNValue = isNaN(42); // false
+let isNaNValue1 = isNaN(NaN); // true
+let isNaNValue2 = isNaN(0 / 0); // true
+let isNaNValue3 = isNaN("42"); // false
+let isNaNValue4 = isNaN(null); // false
+let isNaNValue5 = isNaN([]); // false
+let isNaNValue6 = isNaN({}); // false
+let isNaNValue7 = isNaN(undefined); // true
+let isNaNValue8 = isNaN(false); // false
+let isNaNValue9 = isNaN(Infinity); // false
+
+console.log(
+    isFiniteValue, isFiniteValue1, isFiniteValue2, isFiniteValue3, isFiniteValue4,
+    isFiniteValue5, isFiniteValue6, isFiniteValue7, isFiniteValue8, isFiniteValue9,
+    isIntegerValue, isIntegerValue1, isIntegerValue2, isIntegerValue3, isIntegerValue4,
+    isIntegerValue5, isIntegerValue6, isIntegerValue7, isIntegerValue8, isIntegerValue9,
+    isNaNValue, isNaNValue1, isNaNValue2, isNaNValue3, isNaNValue4,
+    isNaNValue5, isNaNValue6, isNaNValue7, isNaNValue8, isNaNValue9
+);
+
+let num2 = -5678.12345;
+let num3 = 0.12345;
+let num4 = 987654.321;
+
+let exp1 = num1.toExponential(2);
+let exp2 = num2.toExponential(3);
+let exp3 = num3.toExponential(4);
+let exp4 = num4.toExponential(1);
+let exp5 = num1.toExponential(5);
+let exp6 = num2.toExponential(2);
+let exp7 = num3.toExponential(1);
+let exp8 = num4.toExponential(3);
+let exp9 = num1.toExponential(0);
+let exp10 = num4.toExponential(6);
+
+let fixed1 = num1.toFixed(2);
+let fixed2 = num2.toFixed(3);
+let fixed3 = num3.toFixed(4);
+let fixed4 = num4.toFixed(1);
+let fixed5 = num1.toFixed(5);
+let fixed6 = num2.toFixed(2);
+let fixed7 = num3.toFixed(1);
+let fixed8 = num4.toFixed(3);
+let fixed9 = num1.toFixed(0);
+let fixed10 = num4.toFixed(6);
+
+let precision1 = num1.toPrecision(2);
+let precision2 = num2.toPrecision(3);
+let precision3 = num3.toPrecision(4);
+let precision4 = num4.toPrecision(1);
+let precision5 = num1.toPrecision(5);
+let precision6 = num2.toPrecision(2);
+let precision7 = num3.toPrecision(1);
+let precision8 = num4.toPrecision(3);
+let precision9 = num1.toPrecision(6);
+let precision10 = num4.toPrecision(8);
+
+console.log(
+    "toExponential:",
+    exp1,
+    exp2,
+    exp3,
+    exp4,
+    exp5,
+    exp6,
+    exp7,
+    exp8,
+    exp9,
+    exp10
+);
+console.log(
+    "toFixed:",
+    fixed1,
+    fixed2,
+    fixed3,
+    fixed4,
+    fixed5,
+    fixed6,
+    fixed7,
+    fixed8,
+    fixed9,
+    fixed10
+);
+console.log(
+    "toPrecision:",
+    precision1,
+    precision2,
+    precision3,
+    precision4,
+    precision5,
+    precision6,
+    precision7,
+    precision8,
+    precision9,
+    precision10
+);
