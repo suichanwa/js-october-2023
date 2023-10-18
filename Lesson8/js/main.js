@@ -1,6 +1,6 @@
 const randomString = (length) => {
-    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    return Array.from({ length }, () => charset[Math.floor(Math.random() * charset.length)]).join('');
+    const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    return Array.from({ length }, () => characters[Math.floor(Math.random() * characters.length)]).join('');
 }
 
 let MathStudying = {
