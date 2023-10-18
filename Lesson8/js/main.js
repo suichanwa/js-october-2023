@@ -1,73 +1,82 @@
+const randomString = (length) => {
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    return Array.from({ length }, () => charset[Math.floor(Math.random() * charset.length)]).join('');
+}
+
 let MathStudying = {
-    abs: Math.abs(5),
-    acos: Math.acos(0.5),
-    acosh: Math.acosh(2),
-    asin: Math.asin(0.7),
-    asinh: Math.asinh(1.5),
-    atan: Math.atan(0.8),
-    atan2: Math.atan2(1, 2),
-    atanh: Math.atanh(0.3),
-    cbrt: Math.cbrt(27),
-    ceil: Math.ceil(3.7),
-    cos: Math.cos(Math.PI / 3),
-    cosh: Math.cosh(0.4),
-    exp: Math.exp(2),
-    floor: Math.floor(4.6),
-    log: Math.log(10),
-    max: Math.max(5, 8, 2, 10),
-    min: Math.min(5, 8, 2, 10),
-    pow: Math.pow(2, 3),
+    abs: Math.abs(Math.random() * 10),
+    acos: Math.acos(Math.random()),
+    acosh: Math.acosh(Math.random() * 10),
+    asin: Math.asin(Math.random()),
+    asinh: Math.asinh(Math.random() * 10),
+    atan: Math.atan(Math.random()),
+    atan2: Math.atan2(Math.random(), Math.random()),
+    atanh: Math.atanh(Math.random()),
+    cbrt: Math.cbrt(Math.random() * 10),
+    ceil: Math.ceil(Math.random() * 10),
+    cos: Math.cos(Math.random() * Math.PI),
+    cosh: Math.cosh(Math.random()),
+    exp: Math.exp(Math.random()),
+    floor: Math.floor(Math.random() * 10),
+    log: Math.log(Math.random() * 10),
+    max: Math.max(Math.random(), Math.random(), Math.random(), Math.random()),
+    min: Math.min(Math.random(), Math.random(), Math.random(), Math.random()),
+    pow: Math.pow(Math.random(), Math.random()),
     random: Math.random(),
-    round: Math.round(3.2),
-    sin: Math.sin(Math.PI / 4),
-    sinh: Math.sinh(0.5),
-    sqrt: Math.sqrt(16),
-    tan: Math.tan(Math.PI / 4),
-    tanh: Math.tanh(0.6),
-    trunc: Math.trunc(7.8)
+    round: Math.round(Math.random() * 10),
+    sin: Math.sin(Math.random() * Math.PI),
+    sinh: Math.sinh(Math.random()),
+    sqrt: Math.sqrt(Math.random() * 10),
+    tan: Math.tan(Math.random() * Math.PI),
+    tanh: Math.tanh(Math.random()),
+    trunc: Math.trunc(Math.random() * 10),
 };
+
 
 console.log(MathStudying);
 
 let StringManipulation = {
-    charAt: 'hello'.charAt(2),
-    charCodeAt: 'world'.charCodeAt(1),
-    concat: 'Hello'.concat(' ', 'World'),
-    endsWith: 'OpenAI'.endsWith('AI'),
-    fromCharCode: String.fromCharCode(65, 66, 67),
-    includes: 'JavaScript'.includes('Script'),
-    indexOf: 'JavaScript'.indexOf('a'),
-    lastIndexOf: 'JavaScript'.lastIndexOf('a'),
-    localeCompare: 'apple'.localeCompare('banana'),
-    match: 'The rain in Spain'.match(/ain/g),
-    repeat: 'Hello'.repeat(3),
-    replace: 'Hello, world'.replace('world', 'there'),
-    search: 'Hello, world'.search('world'),
-    slice: 'JavaScript'.slice(0, 4),
-    split: 'apple,banana,cherry'.split(','),
-    startsWith: 'JavaScript'.startsWith('Java'),
-    substr: 'JavaScript'.substr(4, 6),
-    substring: 'JavaScript'.substring(0, 4),
-    toLocaleLowerCase: 'HELLO WORLD'.toLocaleLowerCase(),
-    toLocaleUpperCase: 'hello world'.toLocaleUpperCase(),
-    toLowerCase: 'Hello World'.toLowerCase(),
-    toString: (12345).toString(),
-    toUpperCase: 'Hello World'.toUpperCase(),
-    trim: '  Hello, World  '.trim(),
-    valueOf: 'Hello, World'.valueOf()
+    charAt: randomString(5).charAt(2),
+    charCodeAt: randomString(7).charCodeAt(1),
+    concat: randomString(5).concat(' ', randomString(5)),
+    endsWith: randomString(7).endsWith(randomString(3)),
+    fromCharCode: String.fromCharCode(Math.floor(Math.random() * 26) + 65, Math.floor(Math.random() * 26) + 65, Math.floor(Math.random() * 26) + 65),
+    includes: randomString(10).includes(randomString(3)),
+    indexOf: randomString(10).indexOf(randomString(3)),
+    lastIndexOf: randomString(10).lastIndexOf(randomString(3)),
+    localeCompare: randomString(5).localeCompare(randomString(6)),
+    match: randomString(20).match(/ain/g),
+    repeat: randomString(5).repeat(3),
+    replace: randomString(15).replace(randomString(5), randomString(5)),
+    search: randomString(15).search(randomString(5)),
+    slice: randomString(10).slice(0, 4),
+    split: randomString(15).split(randomString(5)),
+    startsWith: randomString(10).startsWith(randomString(3)),
+    substr: randomString(10).substr(4, 6),
+    substring: randomString(10).substring(0, 4),
+    toLocaleLowerCase: randomString(10).toLocaleLowerCase(),
+    toLocaleUpperCase: randomString(10).toLocaleUpperCase(),
+    toLowerCase: randomString(10).toLowerCase(),
+    toString: randomString(5).toString(),
+    toUpperCase: randomString(10).toUpperCase(),
+    trim: `  ${randomString(5)}, ${randomString(5)}  `.trim(),
+    valueOf: randomString(15).valueOf(),
 };
+
 
 console.log(StringManipulation);
 
 
 let NumberFunctions = {
-    isFinite: isFinite(5),
-    isInteger: Number.isInteger(5),
-    isNaN: isNaN("Hello"), // You can replace "Hello" with a value to check for NaN
-    isSafeInteger: Number.isSafeInteger(42),
-    toExponential: (5).toExponential(),
-    toFixed: (3.14159265359).toFixed(2), // You can replace the number with one of your choice
-    toPrecision: (123.456789).toPrecision(4), // You can replace the number with one of your choice
-    toString: (42).toString(),
-    valueOf: (10).valueOf()
+    isFinite: isFinite(Math.random() * 10),
+    isInteger: Number.isInteger(Math.random() * 10),
+    isNaN: isNaN(randomString(5)),
+    isSafeInteger: Number.isSafeInteger(Math.random() * 10),
+    toExponential: (Math.random() * 10).toExponential(),
+    toFixed: (Math.random() * 10).toFixed(2),
+    toPrecision: (Math.random() * 10).toPrecision(4),
+    toString: (Math.random() * 10).toString(),
+    valueOf: (Math.random() * 10).valueOf(),
 };
+
+console.log(NumberFunctions);
