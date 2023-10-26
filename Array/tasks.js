@@ -143,3 +143,7 @@ const intulshit = [
 
 console.log(intulshit.sort((a, b) => a.info.cores - b.info.cores));
 
+const minToMax = [ [14, 45], [1],  ['a', 'c', 'd'] ] [ [1], [14, 45], ['a', 'c', 'd'] ];
+const minToMaxJson = JSON.stringify(minToMax);
+
+//console.log(minToMaxJson);
