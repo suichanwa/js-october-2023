@@ -10,7 +10,6 @@ if (num1 >= num2 && num1 >= num3) {
 
 
 var phoneNumber = prompt("Introduceți numărul de telefon:");
-
 var phonePattern = /^\d{10}$/; // Verifică dacă numărul are exact 10 cifre
 if (phonePattern.test(phoneNumber)) {
     console.log("Mulțumim pentru numărul de telefon.");

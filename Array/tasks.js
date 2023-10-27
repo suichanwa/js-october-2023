@@ -126,11 +126,16 @@ const letter = [
   {char:"e",index:7}
 ];
 
-const showLetterInedx = (array) => {
-  console.log(array.sort((a, b) => a.index - b.index).map(item => item.char).join(''));
+const showLetterInOrder = (array) => {
+  const newArray = array.sort((a, b) => a.index - b.index);
+
+  let string = '';
+  newArray.forEach(element => {
+    string += element.char;
+  });
+  return string;
 }
 
-console.log(showLetterInedx(letter));
 
 console.log(newArray)
 const intulshit = [
@@ -147,3 +152,4 @@ const minToMax = [ [14, 45], [1],  ['a', 'c', 'd'] ] [ [1], [14, 45], ['a', 'c',
 const minToMaxJson = JSON.stringify(minToMax);
 
 //console.log(minToMaxJson);
+
