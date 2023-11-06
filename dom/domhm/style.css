@@ -1,0 +1,41 @@
+/* Style the article containers */
+.article-container, .article-container1, .article-container2, .article-container3, .article-container4, .article-container5 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+
+/* Set a fixed width for each article container */
+.article-container, .article-container1, .article-container2, .article-container3, .article-container4, .article-container5 {
+    width: 300px;
+}
+
+/* Center the text in the article containers */
+.article-container h1, .article-container p {
+    text-align: center;
+}
+
+/* Style the article images */
+.article-container img, .article-container1 img, .article-container2 img, .article-container3 img, .article-container4 img, .article-container5 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.article-container, .article-container1, .article-container2, .article-container3, .article-container4, .article-container5 {
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.footer-container {
+    display: flex;
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    align-items: center;
+}
