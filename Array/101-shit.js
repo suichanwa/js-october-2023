@@ -509,5 +509,4 @@ const getAverageSpentPerItem = (shoppingCart) => average(Object.values(shoppingC
 // Be sure to do this as programmatically as possible.
 // Hint: Similarly to how we sometimes begin a function with setting a variable to zero, we need a starting place:
 // Hint: Consider creating a variable that is a object with the keys "price" and "quantity" both set to 0. You can then compare each item's price and quantity total to the one from "most"
-
 const mostSpentOnItem = (shoppingCart) => Object.keys(shoppingCart.items).reduce((a, b) => shoppingCart.items[a] > shoppingCart.items[b] ? a : b );
