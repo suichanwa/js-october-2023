@@ -49,11 +49,6 @@ const makeanSquare = () => {
     document.querySelector('.list').appendChild(newElement);
 }
 
-const deleteSquare = () => {
-    const square = document.querySelector('.rainbow');
-    square.remove();
-}
-
 list.forEach((item, index) => {
     item.addEventListener('click', (ev) => {
         if(index % 2 === 0) {
@@ -70,14 +65,28 @@ makeNewbtn.addEventListener('click', () => {
     addNewEelementInList();
 });
 
+const square = document.querySelector('.rainbow');
+
 const newSquare = document.querySelector('.secondbtn');
 newSquare.addEventListener('click', () => {
-    makeanSquare();
+    const isCreated = false;
+
+    if(isCreated === false){
+        makeanSquare();
+        isCreated = true;
+    } else {
+        square.remove();
+        isCreated = false;
+    }
 });
 
+parent = document.body;
+const makeELement = (elm, classa = ' ', parent) => { 
+    const newElement = document.createElement(elm);
+    newElement.classList.add(classa);
+    parent.appendChild(newElement);
+    return newElement;
+}
 
-//when ill click on square again it will delete
-const deletebtn = document.querySelector('.deletebtn');
-deletebtn.addEventListener('click', () => {
-    deleteSquare();
-});
+const btt = makeELement('button', 'btn', parent);
+console.log(btt);
