@@ -1,2 +1,11 @@
-//trebuie sa convertesti numarul introdus in dependenta de ce a ales clientu(Binar sau hexa decimal) cand dai click
-// pe butonul convert it in inputul result sa apara rezultatul convertit
+const input = $("input");
+const result = $("#result");
+const convert = $("#convert");
+
+convert.click(function () {
+    const inputValue = input.val();
+    const binaryValue = parseInt(inputValue, 2);
+    const hexaValue = parseInt(inputValue, 16);
+    result.val(binaryValue);
+    result.val(hexaValue);
+});

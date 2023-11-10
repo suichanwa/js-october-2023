@@ -4,7 +4,6 @@
 <head>
     <link rel="stylesheet" href="template.css">
     <title>NUMBER CONVERTOR</title>
-
 </head>
 
 <body>
@@ -17,18 +16,16 @@
         </select>
         <label for="selectMenuTo">To</label>
         <select id="selectMenuTo">
-            <option selected value=""></option>
+            <option selected value="">Hexa decimal</option>
         </select>
-        <button>Convert it</button>
+        <button id="convert">Convert it</button>
 
     </div>
     <footer>
         <label for="result">Result</label>
         <input type="text" name="output" id="result" disabled readonly />
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        solve();
-    </script>
 </body>
 </html>
