@@ -1,11 +1,13 @@
-
+$.getScript("singleClickPlugin.js", function () {
+    console.log("singleClickPlugin.js loaded");
+});
 
 $(() => {
     const chatInput = $("#chat_input");
     const sendButton = $("#send");
     const chatMessages = $("#chat_messages");
 
-    sendButton.click(() => {
+    sendButton.on('singleclick', () => {
         const message = chatInput.val();
         const myMessage = $(".my-message.message").first();
         const newMessage = myMessage.text(message);
@@ -15,17 +17,11 @@ $(() => {
     });
 
     sendButton.dblclick(() => {
-        const message = chatInput.val();
-        const otherMessage = $(".other-message.message").first();
-
-        if (otherMessage.length > 0) {
-            const newMessage = otherMessage.clone().html(message);
+            const message = chatInput.val();
+            const otherMessage = $(".other-message.message").first();
+            const newMessage = otherMessage.html(message);
             chatMessages.append(newMessage);
             chatInput.val("");
-
-            setTimeout(() => {
-                newMessage.hide().fadeIn(500);
-            }, 500);
-        }
+            newMessage.hide().fadeIn(500);
     });
 });

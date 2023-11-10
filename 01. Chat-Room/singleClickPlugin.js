@@ -1,10 +1,3 @@
-// jQuery SingleClick
-// ----------------------------------
-// v1.0.1
-//
-// Written by Omri Yariv.
-// Distributed under MIT license.
-
 (function (root, factory) {
 
   if (typeof define === 'function' && define.amd) {
@@ -66,5 +59,3 @@
 
   return $;
 }));
-
-export default singleclick;
