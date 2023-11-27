@@ -69,82 +69,81 @@ window.addEventListener("click", function (event) {
 
 
 function populateMultiSelectOptions() {
-    var listbox3 = document.getElementById("listbox3");
+  var listbox3 = document.getElementById("listbox3");
+  listbox3.innerHTML = "";
 
-    listbox3.innerHTML = "";
+  fruits.forEach(function (option) {
+    var checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = option;
 
-    fruits.forEach(function (option) {
-        var checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.value = option;
-
-        checkbox.addEventListener("change", function () {
-            updateSelectedOptions();
-        });
-
-        var label = document.createElement("label");
-        label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(option));
-
-        var listItem = document.createElement("ol");
-        listItem.appendChild(label);
-
-        listItem.addEventListener("click", function (event) {
-            if (event.target.tagName !== "INPUT") {
-                checkbox.checked = false;
-                updateSelectedOptions();
-            }
-        });
-
-        listbox3.appendChild(listItem);
+    checkbox.addEventListener("change", function () {
+      updateSelectedOptions();
     });
+
+    var label = document.createElement("label");
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(option));
+
+    var listItem = document.createElement("ol");
+    listItem.appendChild(label);
+
+    listItem.addEventListener("click", function (event) {
+      if (event.target.tagName !== "INPUT") {
+        checkbox.checked = !checkbox.checked;
+        updateSelectedOptions();
+      }
+    });
+
+    listbox3.appendChild(listItem);
+  });
 }
 
 function updateSelectedOptions() {
-    var selectedOptions = [];
-    var checkboxes = document.querySelectorAll("#listbox3 input[type='checkbox']");
+  var selectedOptions = [];
+  var checkboxes = document.querySelectorAll("#listbox3 input[type='checkbox']");
 
-    checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
-            selectedOptions.push(checkbox.value);
+  checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      selectedOptions.push(checkbox.value);
+    }
+  });
+
+  var selectedList = document.getElementById("combo3-selected");
+  selectedList.innerHTML = "";
+
+  selectedOptions.forEach(function (selectedOption, index) {
+    var listItem = document.createElement("li");
+    listItem.innerText = selectedOption;
+
+    if (index < selectedOptions.length - 1) {
+      listItem.innerText += ", ";
+    }
+
+    listItem.addEventListener("click", function () {
+      checkboxes.forEach(function (checkbox) {
+        if (checkbox.value === selectedOption) {
+          checkbox.checked = false;
+          updateSelectedOptions();
         }
+      });
     });
 
-    var selectedList = document.getElementById("combo3-selected");
-    selectedList.innerHTML = ""; 
+    selectedList.appendChild(listItem);
+  });
 
-    selectedOptions.forEach(function (selectedOption) {
-        var listItem = document.createElement("li");
-        listItem.innerText = selectedOption;
-        selectedList.appendChild(listItem);
-        selectedList.innerText = selectedOptions.join(", ");
-    });
-
-    document.getElementById("combo3-remove").style.display = selectedOptions.length > 0 ? "inline" : "none";
+  document.getElementById("combo3-remove").style.display = selectedOptions.length > 0 ? "inline" : "none";
 }
 
 document.getElementById("combo3").addEventListener("click", function () {
-    var listbox3 = document.getElementById("listbox3");
-    listbox3.style.display = listbox3.style.display === "block" ? "none" : "block";
+  var listbox3 = document.getElementById("listbox3");
+  listbox3.style.display = listbox3.style.display === "block" ? "none" : "block";
 });
 
 populateMultiSelectOptions();
 
 window.addEventListener("click", function (event) {
-    if (!document.getElementById("combo3").contains(event.target)) {
-        document.getElementById("listbox3").style.display = "none";
-    }
-});
-
-document.getElementById("combo3-selected").addEventListener("click", function (event) {
-    if (event.target.tagName === "LI") {
-        var selectedText = event.target.innerText;
-        var checkboxes = document.querySelectorAll("#listbox3 input[type='checkbox']");
-        checkboxes.forEach(function (checkbox) {
-            if (checkbox.value === selectedText) {
-                checkbox.checked = false;
-            }
-        });
-        updateSelectedOptions();
-    }
+  if (!document.getElementById("combo3").contains(event.target)) {
+    document.getElementById("listbox3").style.display = "none";
+  }
 });
