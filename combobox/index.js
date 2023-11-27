@@ -142,28 +142,34 @@ document.getElementById("combo3").addEventListener("click", function () {
 
 populateMultiSelectOptions();
 
+
 window.addEventListener("click", function (event) {
-  if (!document.getElementById("combo3").contains(event.target)) {
-    document.getElementById("listbox3").style.display = "none";
-  }
+    if (!document.getElementById("combo3").contains(event.target)) {
+        document.getElementById("listbox3").style.display = "none";
+    }
 });
 
 document.getElementById('exportButton').addEventListener('click', function () {
-    var combo1Value = document.getElementById('combo1-value').textContent;
-    var combo2Value = document.getElementById('combo2').value;
-    var combo3Value = document.getElementById('combo3').value;
+    const selectedOptions = [];
+    const checkboxes = document.querySelectorAll("#listbox3 input[type='checkbox']");
 
-    var valuesObject = {
-        combo1: combo1Value,
-        combo2: combo2Value,
-        combo3: combo3Value
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+            selectedOptions.push(checkbox.value);
+        }
+    });
+
+    const valuesObject = {
+        combo1: document.getElementById('combo1-value').textContent,
+        combo2: document.getElementById('combo2').value,
+        combo3: selectedOptions
     };
 
-    var jsonString = JSON.stringify(valuesObject, null, 2);
+    const jsonString = JSON.stringify(valuesObject, null, 2);
 
-    var blob = new Blob([jsonString], { type: 'application/json' });
+    const blob = new Blob([jsonString], { type: 'application/json' });
 
-    var a = document.createElement('a');
+    const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = 'values.json';
     a.click();
