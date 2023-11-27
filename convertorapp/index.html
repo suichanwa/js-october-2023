@@ -6,13 +6,17 @@
     <title>Currency Converter</title>
 </head>
 <body>
-
-    <label for="amountInput">Enter amount: </label>
-    <input type="number" id="amountInput" placeholder="Enter amount" oninput="convertCurrency()">
-    
+    <label for="amountInputUSD">Enter amount in USD: </label>
+    <input type="number" id="amountInputUSD" placeholder="Enter amount" oninput="convertCurrency('USD')">
     <p id="usdOutput">Converted USD amount: </p>
     <p id="eurOutput">Converted EUR amount: </p>
     <p id="jpyOutput">Converted JPY amount: </p>
+
+    <label for="amountInputEUR">Enter amount in EUR: </label>
+    <input type="number" id="amountInputEUR" placeholder="Enter amount" oninput="convertCurrency('EUR')">
+    
+    <label for="amountInputJPY">Enter amount in JPY: </label>
+    <input type="number" id="amountInputJPY" placeholder="Enter amount" oninput="convertCurrency('JPY')">
 
     <script type="module" src="main.js"></script>
 
