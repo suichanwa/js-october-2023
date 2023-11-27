@@ -1,11 +1,11 @@
-var fruits = ["Apple", "Banana", "Orange", "Grapes", "Mango", "Strawberry", "Pineapple", "Watermelon", "Kiwi", "Peach"];
+import fruits from "./fruits.json" assert {type: "json"};
 
 function populateOptions() {
     var listbox1 = document.getElementById("listbox1");
 
     listbox1.innerHTML = "";
 
-    fruits.forEach(function (fruit) {
+    fruits.fruits.forEach(function (fruit) {
         var option = document.createElement("div");
         option.className = "option";
         option.innerText = fruit;
@@ -17,7 +17,7 @@ function populateOptions() {
 
         listbox1.appendChild(option);
     });
-    document.getElementById("combo1-value").innerText = fruits[0];
+    document.getElementById("combo1-value").innerText = fruits.fruits[0];
 }
 
 document.getElementById("combo1").addEventListener("click", function () {
@@ -39,7 +39,7 @@ function populateEditableOptions() {
 
     listbox2.innerHTML = "";
 
-    fruits.forEach(function (item) {
+    fruits.fruits.forEach(function (item) {
         var option = document.createElement("div");
         option.className = "option";
         option.innerText = item;
@@ -51,7 +51,7 @@ function populateEditableOptions() {
 
         listbox2.appendChild(option);
     });
-    document.getElementById("combo2").value = fruits[0];
+    document.getElementById("combo2").value = fruits.fruits[0];
 }
 
 document.getElementById("combo2").addEventListener("click", function () {
@@ -72,7 +72,7 @@ function populateMultiSelectOptions() {
   var listbox3 = document.getElementById("listbox3");
   listbox3.innerHTML = "";
 
-  fruits.forEach(function (option) {
+  fruits.fruits.forEach(function (option) {
     var checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.value = option;
