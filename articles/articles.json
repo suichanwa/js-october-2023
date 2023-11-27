@@ -1,0 +1,45 @@
+{ 
+  "posts": [ 
+    { 
+      "id": 1, 
+      "title": "json-server", 
+      "author": "typicode" 
+    } 
+  ], 
+  "comments": [ 
+    { 
+      "id": 1, 
+      "body": "some comment", 
+      "postId": 1 
+    } 
+  ], 
+  "profile": { 
+    "name": "typicode" 
+  }, 
+  "articles": [ 
+    { 
+      "titlu": "acasa", 
+      "autor": "alexa", 
+      "content": "mancare", 
+      "id": 1 
+    }, 
+    { 
+      "titlu": "rgirjwi9th2", 
+      "autor": "engu2h4tu82", 
+      "content": "jorgbu24t", 
+      "id": 2 
+    }, 
+    { 
+      "titlu": "wefjewuf", 
+      "autor": "e fhew", 
+      "content": "ewjbfuiew", 
+      "id": 3 
+    }, 
+    { 
+      "titlu": "acasa", 
+      "autor": "riwgnurbgu34", 
+      "content": "rnguh4uht", 
+      "id": 4 
+    } 
+  ] 
+}

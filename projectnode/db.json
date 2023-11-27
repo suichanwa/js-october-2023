@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Jeanette",
+      "last_name": "Penddreth"
+    },
+    {
+      "id": 2,
+      "first_name": "Giavani",
+      "last_name": "Frediani"
+    },
+    {
+      "id": 3,
+      "first_name": "Noell",
+      "last_name": "Bea"
+    },
+    {
+      "id": 4,
+      "first_name": "Willard",
+      "last_name": "Valek"
+    },
+    {
+      "name": "namename",
+      "lastname": "amdlfkadsf",
+      "id": 5
+    }
+  ]
+}
