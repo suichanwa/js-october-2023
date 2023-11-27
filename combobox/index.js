@@ -117,6 +117,7 @@ function updateSelectedOptions() {
         var listItem = document.createElement("li");
         listItem.innerText = selectedOption;
         selectedList.appendChild(listItem);
+        selectedList.innerText = selectedOptions.join(", ");
     });
 
     document.getElementById("combo3-remove").style.display = selectedOptions.length > 0 ? "inline" : "none";
