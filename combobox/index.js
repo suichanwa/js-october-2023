@@ -147,3 +147,24 @@ window.addEventListener("click", function (event) {
     document.getElementById("listbox3").style.display = "none";
   }
 });
+
+document.getElementById('exportButton').addEventListener('click', function () {
+    var combo1Value = document.getElementById('combo1-value').textContent;
+    var combo2Value = document.getElementById('combo2').value;
+    var combo3Value = document.getElementById('combo3').value;
+
+    var valuesObject = {
+        combo1: combo1Value,
+        combo2: combo2Value,
+        combo3: combo3Value
+    };
+
+    var jsonString = JSON.stringify(valuesObject, null, 2);
+
+    var blob = new Blob([jsonString], { type: 'application/json' });
+
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'values.json';
+    a.click();
+});

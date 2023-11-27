@@ -20,8 +20,6 @@ const response = await fetch(url, {
 return await response.json()
 }
 
-
-
 const fun = () => {
     const submit = document.getElementById('submit');
 
