@@ -174,27 +174,3 @@ document.getElementById('exportButton').addEventListener('click', function () {
     a.download = 'values.json';
     a.click();
 });
-
-document.getElementById('exportButton').addEventListener('click', function () {
-    const selectedOptions = [];
-    const checkboxes = document.querySelectorAll("#listbox3 input[type='checkbox']");
-
-    checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
-            selectedOptions.push(checkbox.value);
-        }
-    });
-
-    const valuesObject = {
-        combo1: document.getElementById('combo1-value').textContent,
-        combo2: document.getElementById('combo2').value,
-        combo3: selectedOptions.join(", ")
-    };
-
-    const ws = XLSX.utils.json_to_sheet([valuesObject]);
-
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-
-    XLSX.writeFile(wb, 'values.xlsx');
-});

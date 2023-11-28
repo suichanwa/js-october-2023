@@ -20,7 +20,6 @@ app.get('/Despre_noi', (req, res) => {
   res.sendFile(__dirname + 'Pages/Despre_noi.html');
 });
 
-
 app.get('/contact', (req, res) => {
   res.sendFile(__dirname + '/Pages/contact.html');
 });
@@ -29,4 +28,3 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-//write a function that output things 
