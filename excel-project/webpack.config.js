@@ -1,5 +1,4 @@
 const path = require('path');
-
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
 
@@ -7,13 +6,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 
 module.exports = {
+ devServer: {
+    port: 9000,
+    hot: isDev
+  },
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader,
+         "css-loader", "sass-loader"],
       },
       {
         test: /\.m?js$/,
@@ -64,6 +70,7 @@ module.exports = {
         filename: "bundle.[fullhash].css"
       }
     ),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new ESLintPlugin()
   ],
 };

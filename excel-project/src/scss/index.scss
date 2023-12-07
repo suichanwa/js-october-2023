@@ -1,5 +1,19 @@
-$color: black;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import "~normalize.css";
+
+@import "header.scss";
+@import "formula.scss";
+@import "toolbar.scss";
+@import "table.scss";
+$color: white;
 
 body{
     background-color: $color;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
