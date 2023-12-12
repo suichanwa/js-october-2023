@@ -81,4 +81,5 @@ const checkMarriage = (obj, propertys) => {
     if(bitch.ismarried === true) console.log("yeah") ;
 }
 
-checkMarriage(bitch, true)
+checkMarriage(bitch, true);
+checkMarriage(person, false);
